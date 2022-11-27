@@ -1,8 +1,10 @@
 # Amazon_Vine_Analysis
 
+Analysis of Amazon's vine review program using PySpark and AWS RDS with PostgreSQL
+
 ## Overview
 
-The project aims to help an account manager at BigMarket get an overview of what big data actually is. Then, Amazon reviews written by members of the paid Amazon Vine program shuld be analyzed. The Amazon Vine program is a service that allows manufacturers and publishers to receive reviews for their products. Companies pay a small fee to Amazon and provide products to Amazon Vine members, who are then required to publish a review. The below tasks are accomplished:
+The project aims to help an account manager at BigMarket get an overview of what big data actually is. Then, Amazon reviews written by members of the paid Amazon Vine program are to be analyzed. The Amazon Vine program is a service that allows manufacturers and publishers to receive reviews for their products. Companies pay a small fee to Amazon and provide products to Amazon Vine members, who are then required to publish a review. The below tasks are accomplished:
 - Explain how MapReduce processes big data within Hadoop context.
 - Use Python's MRJob to practice MapReduce outside Hadoop system.
 - Describe how NLP collects and analyzes text data. 
