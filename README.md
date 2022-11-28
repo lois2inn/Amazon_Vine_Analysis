@@ -4,7 +4,7 @@ Analysis of Amazon's vine review program using PySpark and AWS RDS with PostgreS
 
 ## Overview
 
-The project aims to help an account manager at BigMarket get an overview of what big data actually is. Then, Amazon reviews written by members of the paid Amazon Vine program are to be analyzed. The Amazon Vine program is a service that allows manufacturers and publishers to receive reviews for their products. Companies pay a small fee to Amazon and provide products to Amazon Vine members, who are then required to publish a review. The below tasks are accomplished:
+The project aims to help an account manager at BigMarket get an overview of what big data actually is. Then, Amazon reviews written by members of the paid Amazon Vine program are to be analyzed so that recommendations can be made to clients about Vine program. The Amazon Vine program is a service that allows manufacturers and publishers to receive reviews for their products. Companies pay a small fee to Amazon and provide products to Amazon Vine members, who are then required to publish a review. The below tasks are accomplished:
 - Explain how MapReduce processes big data within Hadoop context.
 - Use Python's MRJob to practice MapReduce outside Hadoop system.
 - Describe how NLP collects and analyzes text data. 
@@ -66,7 +66,7 @@ The project aims to help an account manager at BigMarket get an overview of what
   <tr><td><img src="images/total_reviews.png" width="600"/></td></tr>
 </table>
 
-- There are **47 reviews on Vine** services and **8343 reviews on non-Vine** services. This shows that Vine members made just 0.6% of total reviews while non-Vine members contributed over 99% of reviews.  
+- There are **47 reviews on Vine** services and **8343 reviews on non-Vine** services. This shows that Vine members made just 0.6% of total reviews while non-Vine members contributed over 99.4% of reviews.  
 <table>
   <tr>
    <td>Vine Reviews:</td>
@@ -78,8 +78,8 @@ The project aims to help an account manager at BigMarket get an overview of what
  </tr>
 </table>
 
-- It is found that **15 Vine members gave five-star reviews** of the total 47 Vine reviews collected. That shows that **32% of Vine members gave 5-star ratings**.
-- There are **4318 five-star non-Vine reviews** in the Watches category. This shows that around **52% of non-Vine reviews are 5-star ratings**.
+- It is found that **15 Vine members gave five-star reviews** of the total 47 Vine reviews collected. This shows that **32% of Vine members gave 5-star ratings**.
+- There are **4318 five-star non-Vine reviews** of the total 8343 non-Vine reviews collected. This shows that around **52% of non-Vine reviews are 5-star ratings**.
 <table>
   <tr><td>Review Summary:</td></tr>
   <tr><td><img src="images/summary_1.png" width="600"/></td></tr>
@@ -87,12 +87,14 @@ The project aims to help an account manager at BigMarket get an overview of what
 
 ## Summary
 
-- Based on the results above, it can be seen that there are very less Vine reviews compared to non-Vine reviews based on specified filter criteria in the  Watches category.
-Vine members did not show bias when rating their products 
-- State if there is any positivity bias for reviews in the Vine program. Use the results of your analysis to support your statement. 
-- Then, provide one additional analysis that you could do with the dataset to support your statement.
+- Based on the results above, it can be seen that Vine members contribute less (0.6% vs. 99.4%) helpful reviews compared to non-Vine members in the Watches category.
+- 32% of Vine members gave 5-star ratings while 52% of non-Vine members gave 5-stars. This shows that Vine members gave 38% less 5-star ratings compared to that of non-Vine members. **It can be assumed that Vine members did not show bias when rating their products** instead they were more critical while submitting the review.
+- To support the assumption further, additional analysis can be done to include all the review data instead of filtering based on the total votes and percentage helpful votes. 
+- The average star rating could also be calculated as part of further analysis to see if the incentives provided through Vine program are beneficial. The queries would be as shown in the below image: 
 <table>
   <tr>
    <td><img src="images/del_3.png" width="700"/></td>
  </tr>
  </table>
+ 
+ - In fact, after running the above two queries, the trend seems to be the same. Further, NLP sentiment analysis can be done to check for the words used in the majority of the reviews. This can help to see if vine reviews are more touching and detailed, so that customers have an incentive to leave great reviews. 
