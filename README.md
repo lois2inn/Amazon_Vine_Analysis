@@ -1,6 +1,6 @@
 # Amazon_Vine_Analysis
 
-Analysis of Amazon's vine review program using PySpark and AWS RDS with PostgreSQL
+Analysis of Amazon's vine review program using PySpark and AWS RDS with PostgreSQL.
 
 ## Overview
 
@@ -11,10 +11,10 @@ The project aims to help an account manager at BigMarket get an overview of what
 - Use PySpark in Google Colab to extract and process data.
 - Use NLP in conjunction with PySpark to build NLP pipeline.
 - Use AWS Simple Storage Service (S3) and relational databases for basic cloud storage.
-- Analyze Amazon reviews written by members of the paid Amazon Vine program as foloows:
-  - Use PySpark to perform the ETL process to extract the dataset and transform the data. 
+- Analyze Amazon reviews written by members of the paid Amazon Vine program as follows:
+  - Use PySpark to perform the ETL process to extract the Watch reviews dataset and transform the data. 
   - Connect to an AWS RDS instance, and load the transformed data into pgAdmin.
-  - Use PySpark, Pandas, or SQL to determine if there is any bias toward favorable reviews from Vine members in dataset.
+  - Use PySpark to determine if there is any bias toward favorable reviews from Vine members in dataset.
 
 ## Resources
 
@@ -22,11 +22,35 @@ The project aims to help an account manager at BigMarket get an overview of what
 - MRJob-0.7.4
 - NLKT
 - Google Colaboratory
+- AWS Relational Database Service (RDS) and Simple Storage Service (S3)
 - Amazon customer review datasets
 
 ## Results
 
-Using bulleted lists and images of DataFrames as support, address the following questions:
+- Of the 50 datasets of amazon reviews, **Watches** category is analyzed for this project. The dataset can be found [here](https://s3.amazonaws.com/amazon-reviews-pds/tsv/amazon_reviews_us_Watches_v1_00.tsv.gz).
+- The Watches reviews dataset is extracted into a dataframe, which is then transformed into four separate dataframes that match the database table schema as shown below: 
+<table>
+  <tr>
+    <td><img src="customers_df.png" width="500"/></td>
+    <td><img src="products_df.png" width="500"/></td>
+  <tr>
+  <tr>
+    <td><img src="review_id_df.png" width="500"/></td>
+    <td><img src="vine_df.png" width="500"/></td>
+  <tr>
+</table>
+- The transformed data is uploaded into the appropriate tables. The images below show that the data has been uploaded into AWS RDS.
+<table>
+  <tr>
+    <td><img src="customers_table.png" width="500"/></td>
+    <td><img src="products_table.png" width="500"/></td>
+  <tr>
+  <tr>
+    <td><img src="review_id.png" width="500"/></td>
+    <td><img src="vine_table.png" width="500"/></td>
+  <tr>
+</table>
+- Using bulleted lists and images of DataFrames as support, address the following questions:
 - How many Vine reviews and non-Vine reviews were there?
 - How many Vine reviews were 5 stars? How many non-Vine reviews were 5 stars?
 - What percentage of Vine reviews were 5 stars? What percentage of non-Vine reviews were 5 stars?
