@@ -60,24 +60,39 @@ The project aims to help an account manager at BigMarket get an overview of what
 - **PySpark** is used to analyze Vine reviews data, to determine if a paid Vine review makes a difference in the percentage of 5-star reviews. In order to focus on reviews that would be considered more likely to be helpful, the dataset is filtered so that:
   - the count of total votes is equal to or greater than 20.
   - Percentage of helpful votes to total votes is equal to or greater than 50%.
--  Based on above filters, there are a total of 8390 helpful reviews in Vine and non-Vine services combined.
-<img src="images/total_reviews.png"/>
+-  Based on above filters, there are **a total of 8390 helpful reviews** in Vine and non-Vine services combined.
+<table>
+  <tr><td>Total Reviews</td></tr>
+  <tr><td><img src="images/total_reviews.png" width="600"/></td></tr>
+</table>
 
-- As shown below, there are 47 reviews on Vine program.
+- There are **47 reviews on Vine** services and **8343 reviews on non-Vine** services. This shows that Vine members made just 0.6% of total reviews while non-Vine members contributed over 99% of reviews.  
 <table>
   <tr>
-   <td>Vine Reviews</td>
-   <td>Non-Vine Reviews </td>
+   <td>Vine Reviews:</td>
+   <td>Non-Vine Reviews: </td>
  </tr>
  <tr>
-   <td><img src="images/paid_reviews.png" width="400"/></td>
+   <td><img src="images/paid_reviews.png" width="500"/></td>
    <td><img src="images/unpaid_reviews.png" width="500"/></td>
  </tr>
 </table>
-- How many Vine reviews and non-Vine reviews were there?
-- How many Vine reviews were 5 stars? How many non-Vine reviews were 5 stars?
-- What percentage of Vine reviews were 5 stars? What percentage of non-Vine reviews were 5 stars?
+
+- It is found that **15 Vine members gave five-star reviews** of the total 47 Vine reviews collected. That shows that **32% of Vine members gave 5-star ratings**.
+- There are **4318 five-star non-Vine reviews** in the Watches category. This shows that around **52% of non-Vine reviews are 5-star ratings**.
+<table>
+  <tr><td>Review Summary:</td></tr>
+  <tr><td><img src="images/summary_1.png" width="600"/></td></tr>
+</table>
 
 ## Summary
+
+- Based on the results above, it can be seen that there are very less Vine reviews compared to non-Vine reviews based on specified filter criteria in the  Watches category.
+Vine members did not show bias when rating their products 
 - State if there is any positivity bias for reviews in the Vine program. Use the results of your analysis to support your statement. 
 - Then, provide one additional analysis that you could do with the dataset to support your statement.
+<table>
+  <tr>
+   <td><img src="images/del_3.png" width="700"/></td>
+ </tr>
+ </table>
