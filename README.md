@@ -23,35 +23,57 @@ The project aims to help an account manager at BigMarket get an overview of what
 - NLKT
 - Google Colaboratory
 - AWS Relational Database Service (RDS) and Simple Storage Service (S3)
+- SQL and PgAdmin
 - Amazon customer review datasets
 
 ## Results
 
+### Extract-Transform-Load of Amazon Product Reviews
+
 - Of the 50 datasets of amazon reviews, **Watches** category is analyzed for this project. The dataset can be found [here](https://s3.amazonaws.com/amazon-reviews-pds/tsv/amazon_reviews_us_Watches_v1_00.tsv.gz).
-- The Watches reviews dataset is extracted into a dataframe, which is then transformed into four separate dataframes that match the database table schema as shown below: 
+- The Watches reviews dataset has over 960K reviews. All of the data is extracted into a dataframe, which is then transformed into four separate dataframes that match the database table schema as shown below: 
 <table>
   <tr>
-    <td><img src="images/customers_df.png" width="600"/></td>
-    <td><img src="images/products_df.png" width="500"/></td>
+    <td><img src="images/customers_df.png" width="500"/></td>
+    <td><img src="images/products_df.png" width="400"/></td>
+  </tr>
   <tr>
-  <tr>
-    <td><img src="images/review_id_df.png" width="600"/></td>
-    <td><img src="images/vine_df.png" width="500"/></td>
-  <tr>
+    <td><img src="images/review_id_df.png" width="500"/></td>
+    <td><img src="images/vine_df.png" width="400"/></td>
+  </tr>
 </table>
 
 - The transformed data is uploaded into the appropriate database tables.
 <table>
   <tr>
-    <td><img src="images/customers_table.png" width="300"/></td>
+    <td><img src="images/customers_table.png" width="250"/></td>
     <td><img src="images/products_table.png" width="500"/></td>
+  </tr>
   <tr>
-  <tr>
-    <td><img src="images/review_id_table.png" width="500"/></td>
-    <td><img src="images/vine_table.png" width="500"/></td>
-  <tr>
+    <td><img src="images/review_id_table.png" width="400"/></td>
+    <td><img src="images/vine_table.png" width="400"/></td>
+  </tr>
 </table>
-- Using bulleted lists and images of DataFrames as support, address the following questions:
+
+### Determine Bias of Amazon Reviews
+
+- **PySpark** is used to analyze Vine reviews data, to determine if a paid Vine review makes a difference in the percentage of 5-star reviews. In order to focus on reviews that would be considered more likely to be helpful, the dataset is filtered so that:
+  - the count of total votes is equal to or greater than 20.
+  - Percentage of helpful votes to total votes is equal to or greater than 50%.
+-  Based on above filters, there are a total of 8390 helpful reviews in Vine and non-Vine services combined.
+<img src="images/total_reviews.png"/>
+
+- As shown below, there are 47 reviews on Vine program.
+<table>
+  <tr>
+   <td>Vine Reviews</td>
+   <td>Non-Vine Reviews </td>
+ </tr>
+ <tr>
+   <td><img src="images/paid_reviews.png" width="400"/></td>
+   <td><img src="images/unpaid_reviews.png" width="500"/></td>
+ </tr>
+</table>
 - How many Vine reviews and non-Vine reviews were there?
 - How many Vine reviews were 5 stars? How many non-Vine reviews were 5 stars?
 - What percentage of Vine reviews were 5 stars? What percentage of non-Vine reviews were 5 stars?
