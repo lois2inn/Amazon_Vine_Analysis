@@ -31,23 +31,24 @@ The project aims to help an account manager at BigMarket get an overview of what
 - The Watches reviews dataset is extracted into a dataframe, which is then transformed into four separate dataframes that match the database table schema as shown below: 
 <table>
   <tr>
-    <td><img src="customers_df.png" width="500"/></td>
-    <td><img src="products_df.png" width="500"/></td>
+    <td><img src="images/customers_df.png" width="600"/></td>
+    <td><img src="images/products_df.png" width="500"/></td>
   <tr>
   <tr>
-    <td><img src="review_id_df.png" width="500"/></td>
-    <td><img src="vine_df.png" width="500"/></td>
+    <td><img src="images/review_id_df.png" width="600"/></td>
+    <td><img src="images/vine_df.png" width="500"/></td>
   <tr>
 </table>
-- The transformed data is uploaded into the appropriate tables. The images below show that the data has been uploaded into AWS RDS.
+
+- The transformed data is uploaded into the appropriate database tables.
 <table>
   <tr>
-    <td><img src="customers_table.png" width="500"/></td>
-    <td><img src="products_table.png" width="500"/></td>
+    <td><img src="images/customers_table.png" width="300"/></td>
+    <td><img src="images/products_table.png" width="500"/></td>
   <tr>
   <tr>
-    <td><img src="review_id.png" width="500"/></td>
-    <td><img src="vine_table.png" width="500"/></td>
+    <td><img src="images/review_id_table.png" width="500"/></td>
+    <td><img src="images/vine_table.png" width="500"/></td>
   <tr>
 </table>
 - Using bulleted lists and images of DataFrames as support, address the following questions:
